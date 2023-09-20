@@ -1,0 +1,164 @@
+import re
+total = ""
+letra = str(input("Escreva uma letra A ou B: "))
+while letra == "A" or letra == "B":
+  numero = int(input("Escolha um numero entre 1 e 2: "))
+  total = (total + letra + str(numero))
+  print(total)
+  continuar = str(input("Deseja Continuar? S/N: "))
+  if (continuar == "S"):
+    letra = str(input("Escreva uma letra A ou B: "))
+  if (continuar == "N"):
+    print ("repetição finalizada")
+    break
+else:
+  print("Letra Invalida")
+if (continuar == "N"):
+  x = re.sub("A","letra", total)
+  print(x)
+
+
+
+
+
+VER 2.0
+
+import re
+total = ""
+letra = str(input("Escreva uma letra A ou B: "))
+while letra == "A" or letra == "B":
+  numero = int(input("Escolha um numero entre 1 e 2: "))
+  total = (total + letra + str(numero))
+  print(total)
+  continuar = str(input("Deseja Continuar? S/N: "))
+  if (continuar == "S"):
+    letra = str(input("Escreva uma letra A ou B: "))
+  if (continuar == "N"):
+    print ("repetição finalizada")
+    break
+else:
+  print("Letra Invalida")
+if (continuar == "N"):
+  x = re.sub(("[A-B]"),"<letra>", total)
+  y = re.sub(("[1-2]"), "<numero>", total)
+  soma = (x + y)
+  print(soma)
+
+
+
+
+
+
+
+
+
+
+VER 3.0
+import re
+total = ""
+letra = str(input("Escreva uma letra A ou B: "))
+while letra == "A" or letra == "B":
+  numero = int(input("Escolha um numero entre 1 e 2: "))
+  total = (total + letra + str(numero))
+  print(total)
+  continuar = str(input("Deseja Continuar? S/N: "))
+  if (continuar == "S"):
+    letra = str(input("Escreva uma letra A ou B: "))
+  if (continuar == "N"):
+    print ("repetição finalizada")
+    break
+else:
+  print("Letra Invalida")
+if (continuar == "N"):
+  x = re.sub(("[A-B]"),"<letra>", total)
+  print(x)
+  y = re.sub(("[1-2]"),"<digito>", x)
+  print(y)
+  z = re.sub("<letra><digito>", "<element>", y)
+  print(z)
+  a = re.sub("<element>", "<list>", z)
+  print (a)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+VER 4.0
+
+
+
+import re
+total = ""
+letra = str(input("Escreva uma letra A ou B: "))
+while letra == "A" or letra == "B":
+  numero = int(input("Escolha um numero entre 1 e 2: "))
+  total = (total + letra + str(numero))
+  print(total)
+  continuar = str(input("Deseja Continuar? S/N: "))
+  if (continuar == "S"):
+    letra = str(input("Escreva uma letra A ou B: "))
+  if (continuar == "N"):
+    print ("repetição finalizada")
+    break
+else:
+  print("Letra Invalida")
+if (continuar == "N"):
+  x = re.sub(("[A-B]"),"<letra>", total)
+  print(x)
+  y = re.sub(("[1-2]"),"<digito>", x)
+  print(y)
+  z = re.sub("<letra><digito>", "<element>", y)
+  print(z)
+  a = re.sub("<element>", "<list>", z)
+  print(a)
+print("Construção da Linguagem Lexica: \n"
+"<list> ::= <element><list> | <element>\n"
+"<element> ::= <letter><digit>\n"
+"<letter> ::= A | B\n"
+"<digit> ::= 1|2")
+print("String Digitada: " +total)
+
+if(a == "<list><list>"):
+  print("<element><list>")
+  print(""+z+a)
+  print(""+x+z+a)
+else:  
+  print("<element>")
+
+
+
+
+
+
+Ver: 5.0
+
+
+import re
+total = ""
+letra = str(input("Escreva uma letra A ou B: "))
+while letra == "A" or letra == "B":
+  numero = int(input("Escolha um numero entre 1 e 2: "))
+  total = (total + letra + str(numero))
+  print(total)
+  continuar = str(input("Deseja Continuar? S/N: "))
+  if (continuar == "S"):
+    letra = str(input("Escreva uma letra A ou B: "))
+  if (continuar == "N"):
+    print ("repetição finalizada")
+    break
+else:
+  print("Letra Invalida")
+if (continuar == "N"):
+  print("Sucesso\n" +total)
+  #x = re.sub("A","Sucesso", total)
+ # print(x)
